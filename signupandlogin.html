@@ -1,112 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>sign in and login</title>
-    <link rel="stylesheet" href="login.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login.css" />
+    <title>Sign in & Sign up Form</title>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <div class="forms-container">
-            <div class="signin-signup">
-                <form action="#" class="sign-in-form">
-                    <h2 class="title">Sing in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="password" />
-                    </div>
-                        <input type="submit" class="btn solid">
-                        <p class="social-text">Or sign in with other platforms</p>
-                        <div class="social-media">
-                        <a href="" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="" class="social-icon">
-                        <i class="fab fa-google"></i>
-                        </a>
-                        <a href="" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>    
-                </form >
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form" id="form2">
+            <img class="logo-image" src="https://1.bp.blogspot.com/-BHA-pGjw8Os/X2H8kbmStCI/AAAAAAAAA78/A-0Thx7wU3w0kYqMd2WzjK7cEvaNrswxgCLcBGAsYHQ/s1452/PharmEasy%2Bbusiness%2Bmodel.png" alt="">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="Email" required  autofocus id="login_name"/>
             </div>
-
-
-            <div class="signup-signup">
-                <form action="#" class="sign-up-form">
-                    <h2 class="title">Sing up</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="email" />
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="password" />
-                    </div>
-
-                        <input type="submit" class="btn solid">
-                        <p class="social-text">Or sign up with other platforms</p>
-                        <div class="social-media">
-                        <a href="" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="" class="social-icon">
-                        <i class="fab fa-google"></i>
-                        </a>
-                        <a href="" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>    
-                </form >
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="login_password"/>
             </div>
-        </div>  
-        <div class="panels-container">
+            <input class="btn solid" type="submit" value="Login" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+
+
+
+          <form action="#" class="sign-up-form" id="form1">
+            <img class="logo-image" src="https://1.bp.blogspot.com/-BHA-pGjw8Os/X2H8kbmStCI/AAAAAAAAA78/A-0Thx7wU3w0kYqMd2WzjK7cEvaNrswxgCLcBGAsYHQ/s1452/PharmEasy%2Bbusiness%2Bmodel.png" alt="">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" id="name" required autofocus/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" id="email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="password"/>
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
         <div class="panel left-panel">
-            <div class="content">
-                <h3>New Here?</h3>
-                <p>Sign up for free</p>
-                <button class="btn transparent" 
-                id="sign-up-button">Sign Up</button>
-            </div>
-            <!-- <img src="https://image3.mouthshut.com/images/imagesp/925860672s.jpg" alt="logo"> -->
-        </div>
-
-        <div class="panel right-panel">
-            <div class="content">
-                <h3>Already have an account?</h3>
-                <p>Sign in here</p>
-                <button class="btn transparent" 
-                id="sign-in-button">Sign in</button>
-            </div>
-            <!-- <img src="https://etimg.etb2bimg.com/photo/90594688.cms" alt="logo"> -->
-        </div>
+          <div class="content">
+            <h3>Don't have account?</h3>
+            <p>Create your account now</p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
           </div>
-       </div>
-
-
-
-    <script src="index.js"></script>
-</body>
+          <!-- <img src="https://entrackr.com/storage/2018/03/pharmeasy-image.jpg" class="image" alt="" /> -->
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Already have account</h3>
+            <p>Sign in here</p>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+          <!-- <img src="https://entrackr.com/storage/2018/03/pharmeasy-image.jpg" class="image" alt="" /> -->
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
 </html>
