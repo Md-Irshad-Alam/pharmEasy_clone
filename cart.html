@@ -4,9 +4,234 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cart page</title>
+    <style>
+       #nav{
+             display:flex;
+             background:rgb(16,132,126);
+             margin:auto;
+         }
+         #logopharm{
+           height:70px;
+         }
+         #nav>div{
+             
+             color:white;
+             margin:auto;
+             font-size:22px;
+         }
+         #imgcont{
+             margin:auto;
+         }
+         #nav>div:hover{
+             text-decoration: underline;
+         }
+         #main{
+          margin-top: 30px;
+           display:flex;
+           width:100%;
+           justify-content: space-around;
+           
+           
+         }
+         #container{
+           width:60%;
+            display:grid;
+            grid-template-columns:repeat(2,300px);
+            grid-gap:20px;
+            
+        }
+        #container>div>p{
+          margin-top:-10px;
+
+        }
+        
+        #container>div>img{
+          height:50%;
+          width:100%;
+          margin-bottom:10px;
+        }
+        #contp{
+          margin-top:-20px;
+          display:flex;
+          padding-top:-50px;
+          padding-left:40%;
+        }
+        #contp>p:nth-child(2){
+          text-decoration: line-through;
+          color:rgb(104, 102, 102);
+          margin-left:15px;
+        }
+        #container>div{
+          background:rgb(247,248,248);
+          text-align:center;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          border-radius:10px;
+          height:380px;
+        }
+        
+        #container2{
+          width:25%;
+          height:600px;
+          border:3px solid teal;
+          text-align:center;
+        
+        }
+        button{
+          border:0px;
+          border-radius: 12px;
+          background:rgb(16,132,126);
+          padding:20px;
+          width:270px;
+          font-weight:bold;
+          color:white;
+        }
+        button:hover{
+          background:rgb(31, 168, 161);
+          cursor: pointer;
+        }
+        #text{
+          color:rgb(16,132,126);
+          font-weight:bold;
+          font-size: 25px;
+          
+        }
+       
+        
+    @media only screen and (min-width:0px) and (max-width: 320px){
+            #container{
+                grid-template-columns: repeat(1,1fr);
+            }
+            #container>div>img{
+              width:100%;
+              height:50%;
+            }
+            
+        }
+        @media only screen and (min-width:321px) and (max-width:720px) {
+            #container{
+                grid-template-columns: repeat(1,300px);
+            }
+            button{
+          border:0px;
+          border-radius: 12px;
+          background:rgb(16,132,126);
+          padding:15px;
+          width:150px;
+          font-weight:bold;
+          color:white;
+        }
+        }
+        
+    </style>
 </head>
 <body>
-    
+  <div id="nav">
+    <div>
+        <img id="logopharm" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png">
+    </div>
+    <div id="omed" onclick="window.location.href='med.html'">Order Medicine</div>
+    <div id="hcp">HealthCare product</div>
+    <div id="lt">Lab Test</div>
+    <div id="sup" onclick="window.location.href='signupmed.html'">Login/SignUp</div>
+    <div id="cart" onclick="window.location.href='cartmed.html'">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg">
+        <span>Cart</span>
+    </div>
+ </div>
+  
+<div id="main">
+    <div id="container"></div>
+   
+    </div>
+</div>
+
+
+
 </body>
 </html>
+<script>
+     var med_toby= JSON.parse(localStorage.getItem("cartitem"))||[];
+     window.addEventListener("load",function(){
+        datadisplay(med_toby);
+       })
+     function sortfunction(){
+       var sele=document.querySelector("#selecttag").value;
+       if(sele=="high"){
+        med_toby.sort(function(a,b){
+          return b.price-a.price;
+        })
+       }
+       else if(sele=="low"){
+         med_toby.sort(function (a,b){
+           return a.price-b.price;
+         })
+       }
+       
+       datadisplay(med_toby);
+     }
+   function datadisplay(med_toby){
+     document.querySelector("#container").innerHTML="";
+
+        med_toby.map(function (data,index) {
+        var div = document.createElement("div");
+        
+        var image1 = document.createElement("img");
+        image1.setAttribute("src", data.image);
+
+        
+
+        var name1 = document.createElement("p");
+        name1.textContent = data.meDname;
+
+        var name2 = document.createElement("p");
+        name2.textContent = data.Brandname;
+      
+        var name3 = document.createElement("p");
+        name3.textContent = data.discription;
+
+      
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("id","contp");
+
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+
+        var p2 = document.createElement("p");
+        p2.textContent = data.strikedOfprice;
+      
+
+        div2.append(p1, p2);
+        var btn=document.createElement("button");
+        btn.setAttribute("id","innerbtn");
+        btn.textContent="Remove";
+        btn.addEventListener("click",function(){
+          deletetask(index)
+        })
+      
+
+      
+
+        
+        div.append(image1,name1,name2,name3 , div2,btn);
+        document.querySelector("#container").append(div);
+      });
+    }
+
+
+    function deletetask(index){
+     med_toby.splice(index,1)
+     localStorage.setItem("cartitem",JSON.stringify(med_toby))
+     window.location.href="cartmed.html";
+     datadisplay(med_toby)
+   }
+  
+
+
+var total= med_toby.reduce(function (x,v){
+ return x+Number(v.price);
+},0)
+document.querySelector("h1").textContent=` ₹ ${total}`
+ console.log(total);
+</script>

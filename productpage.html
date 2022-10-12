@@ -4,9 +4,429 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Page</title>
+    <style>
+       #nav{
+             display:flex;
+             background:rgb(16,132,126);
+             margin:auto;
+         }
+         #logopharm{
+           height:70px;
+         }
+         #nav>div{
+             
+             color:white;
+             margin:auto;
+             font-size:22px;
+         }
+         #imgcont{
+             margin:auto;
+         }
+         #nav>div:hover{
+             text-decoration: underline;
+         }
+           #container{
+          
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-gap:40px;
+            width:90%;
+            margin:auto;
+            margin-top: 30px;
+            
+        }
+        #container>div{
+          background:rgb(247,248,248);
+          text-align:center;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          border-radius:10px;
+          height:410px;
+        }
+        #container>div>p{
+          margin-top:-10px;
+          font-weight:700;
+
+        }
+        #container>div>img{
+          height:50%;
+          width:100%;
+          margin-bottom:10px;
+        }
+        #contp{
+          margin-top:-20px;
+          display:flex;
+          padding-top:-50px;
+          padding-left:40%;
+        }
+        #contp>p:nth-child(1){
+          font-weight:900;
+          font-size: 22px;
+        }
+        #contp>p:nth-child(2){
+          margin-left:15px;
+          text-decoration: line-through;
+          color:rgb(104, 102, 102);
+          font-size: 20px;
+        }
+       
+        button{
+          background:rgb(16,132,126);
+          padding:8px;
+          border-radius:10px;
+          color:white;
+          border:0px;
+          margin-top:-20px;
+          width:150px;
+          height:50px;
+          margin-bottom: 10px;
+        }
+      
+        
+       
+        
+        @media only screen and (min-width:0px) and (max-width: 320px){
+            #container{
+                grid-template-columns: repeat(1,1fr);
+            }
+            #container>div>img{
+              width:100%;
+              height:50%;
+            }
+            
+        }
+        @media only screen and (min-width:321px) and (max-width:720px) {
+            #container{
+                grid-template-columns: repeat(2,300px);
+            }
+        }
+    </style>
 </head>
 <body>
+  <div id="nav">
+    <div>
+        <img id="logopharm" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png">
+    </div>
+    <div id="omed" onclick="window.location.href='med.html'">Order Medicine</div>
+    <div id="hcp">HealthCare product</div>
+    <div id="lt">Lab Test</div>
+    <div id="sup" onclick="window.location.href='signupmed.html'">Login/SignUp</div>
+    <div id="cart" onclick="window.location.href='cartmed.html'">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg">
+        <span>Cart</span>
+    </div>
+ </div>
     
+ 
+     <div id="container"></div>
 </body>
 </html>
+<script>
+    var med_data=[{image:"https://cdn01.pharmeasy.in/dam/products/064425/ecosprin-75mg-strip-of-14-tablets-1-1641535994.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Ecosprin 75mg Strip Of 14 Tablets",
+                   Brandname:"byUSV PVT LTD",
+                   discription:"14tablet(s) in strip",
+                   price:3.99,
+                   strikedOfprice:4.06,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/159115/shelcal-500mg-strip-of-15-tablets-2-1641531946.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Shelcal 500mg Strip Of 15 Tablets",
+                   Brandname:"By TORRENT PHARMACEUTICALS LTD",
+                   discription:"15 Tablet(s) in Strip",
+                   price:89.13,
+                   strikedOfprice:100,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/064422/ecosprin-av-75mg-strip-of-15-capsules-1-1641535995.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Ecosprin Av 75mg Strip Of 15 Capsules",
+                   Brandname:"By USV PVT LTD",
+                   discription:"15 Capsule(s) in Strip",
+                   price:45.23,
+                   strikedOfprice:55,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/071710/evion-400mg-strip-of-10-capsules-2-1641535646.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Evion 400mg Strip Of 10 Capsules",
+                   Brandname:"By MERCK LIMITED",
+                   discription:"10 Capsule(s) in Strip",
+                   price:26.81,
+                   strikedOfprice:32,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/I00306/pan-40mg-strip-of-15-tablets-2-1641531068.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Pan 40mg Strip Of 15 Tablets",
+                   Brandname:"By ALKEM LABORATORIES LTD",
+                   discription:"15 Tablet(s) in Strip",
+                   price:122.18,
+                   strikedOfprice:149,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/I48564/new-celin-500mg-strip-of-25-tablets-2-1641537879.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"New Celin 500mg Strip Of 25 Tablets",
+                   Brandname:"By KOYE PHARMACEUTICALS PVT LTD",
+                   discription:"25 Tablet(s) in Strip",
+                   price:31.68,
+                   strikedOfprice:38.64,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/I09432/neurobion-forte-tablet-30s-1-1641537319.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Neurobion Forte Tablet 30'S",
+                   Brandname:"By PROCTER & GAMBLE HEALTHCARE",
+                   discription:"30 Tablet(s) in Strip",
+                   price:28.45,
+                   strikedOfprice:34.70,},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/022236/becosules-strip-of-20-capsules-2-1641535886.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Becosules Strip Of 20 Capsules",
+                   Brandname:"By PFIZER LTD",
+                   discription:"20 Capsule(s) in Strip",
+                   price:37.45,
+                   strikedOfprice:45},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/059346/dolo-650mg-strip-of-15-tablets-2-1641535221.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Dolo 650mg Strip Of 15 Tablets",
+                   Brandname:"By MICRO LABS",
+                   discription:"15 Tablet(s) in Strip",
+                   price:25.35,
+                   strikedOfprice:30},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/I02514/telma-40mg-strip-of-30-tablets-2-1641530972.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Telma 40mg Strip Of 30 Tablets",
+                   Brandname:"By GLENMARK PHARMACEUTICALS",
+                   discription:"30 Tablet(s) in Strip",
+                   price:182.12,
+                   strikedOfprice:222},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/156765/savlon-antiseptic-disinfectant-liquid-1000-ml-2-1641398730.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Savlon Antiseptic Disinfectant Liquid 1000 Ml",
+                   Brandname:"By Savlon",
+                   discription:"250ml bottle",
+                   price:261,
+                   strikedOfprice:291},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/I05582/dr-morepen-gluco-one-bg-03-glucometer-test-strips-box-of-50-1-1641398939.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Dr Morepen Gluco One Bg 03 Glucometer Test Strips Box Of 50",
+                   Brandname:"By Dr. MORPHEN strore",
+                   discription:"Box with KIt",
+                   price:571,
+                   strikedOfprice:1000},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/000660/accu-chek-active-glucometer-kit-with-free-10-strips-2-1641399106.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Accu-Chek Active Glucometer Kit (With Free 10 Strips)",
+                   Brandname:"By Accu chewck store",
+                   discription:"Box with Kit Accu check",
+                   price:1407,
+                   strikedOfprice:1599},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/M26466/n95-mask-packet-of-5-buy-2-get-3-free-2-1641792579.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"N95 Mask Packet Of 5 (Buy 2 & Get 3 Free)",
+                   Brandname:"By N95",
+                   discription:"synthetic cloth 2ply mask",
+                   price:357,
+                   strikedOfprice:500},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/T22634/liveasy-wellness-calcium-magnesium-vitamin-d3-zinc-bones-dental-health-bottle-60-tabs-2-1641788943.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Liveasy Wellness Calcium, Magnesium, Vitamin D3 & Zinc - Bones & Dental Health - Bottle 60 Tabs",
+                   Brandname:"By liVEASY",
+                   siscription:"50 tabblets in bottle",
+                   price:390,
+                   dtrikedOfprice:499},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/165555/supradyn-multivitamin-tablets-strip-of-15-s-2-1638257488.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Supradyn Multivitamin Tablets Strip Of 15 'S",
+                   Brandname:"By SUPRADYN",
+                   discription:"15 tabblets in strip",
+                   price:48,
+                   strikedOfprice:50},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/O31911/everherb-ashwagandha-immunity-booster-capsules-anxiety-stress-relief-bottle-of-60-6.1-1641788689.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Everherb Ashwagandha - Immunity Booster Capsules - Anxiety & Stress Relief - Bottle Of 60",
+                   Brandname:"By EVEREHERB",
+                   discription:"100 capsule in bottle",
+                   price:299,
+                   strikedOfprice:300},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/I40097/dettol-liquid-disinfectant-for-floor-cleaner-surface-disinfection-personal-hygiene-lime-fresh-500ml-2-1641788107.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Dettol Liquid Disinfectant For Floor Cleaner, Surface Disinfection Personal Hygiene Lime Fresh 500ml",
+                   Brandname:"By DETTOL",
+                   discription:"100ml liquid in bottle",
+                   price:173,
+                   strikedOfprice:193},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/I13139/ensure-diabetes-care-vanilla-diabetes-care-powder-jar-of-400-g-2-1641787859.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Ensure Diabetes Care Vanilla Diabetes Care Powder Jar Of 400 G",
+                   Brandname:"By ENSURE",
+                   discription:"400g powder in jar",
+                   price:638,
+                   strikedOfprice:725},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/G99739/liveasy-essentials-instant-hand-sanitizer-kills-999-germs-gel-based-200ml-2-1641793048.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Liveasy Essentials Instant Hand Sanitizer-Kills 99.9% Germs - Gel Based - 200ml",
+                   Brandname:"By LIVEEASY",
+                   discription:"200ml liquid in bottle",
+                   price:100,
+                   strikedOfprice:100},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/H37794/liveasy-wellness-calcium-magnesium-vitamin-d3-zinc-bones-dental-health-bottle-of-90-tablets-2-1632781619.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Liveasy Wellness Calcium, Magnesium, Vitamin D3 - Bones & Dental Health - Bottle Of 90 Tablets",
+                   Brandname:"By LIVEEASY",
+                   discription:"Bottle Of 90 Tablets",
+                   price:679,
+                   strikedOfprice:749},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/207833/calcimax-forte-plus-strip-of-30-tablets-2-1641398791.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Calcimax Forte Plus Strip Of 30 Tablets",
+                   Brandname:"By CALCIMAX",
+                   discription:"strip Of 30 Tablets",
+                   price:208,
+                   strikedOfprice:270},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/220645/mega-freeflex-joint-health-tablets-strip-of-10-2-1641398805.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Mega Freeflex Joint Health Tablets Strip Of 10",
+                   Brandname:"By FREEFEEEX",
+                   discription:"strip Of 10 Tablets",
+                   price:344,
+                   strikedOfprice:430},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/079972/new-freeflex-forte-tablet-2-1641399051.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"New Freeflex Forte Tablet",
+                   Brandname:"By FREEFEEEX",
+                   discription:"strip Of 20 Tablets",
+                   price:528,
+                   strikedOfprice:615},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products/I01561/jointace-c2-plus-strip-of-10-tablets-2-1641533658.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Jointace C2 Plus Strip Of 10 Tablets",
+                   Brandname:"By JOINTACE C2 PLUS",
+                   discription:"strip Of 20 Tablets",
+                   price:373,
+                   strikedOfprice:370},
+
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/U87803/aristozyme-gold-strip-of-10-tablets-1-1641538003.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Aristozyme Gold Strip Of 10 Tablets",
+                   Brandname:"By ARISTOZYME STORE",
+                   discription:"strip Of 20 Tablets",
+                   price:69.7,
+                   strikedOfprice:85},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products/I06029/oxalo-forte-cap-10s-2-1641536803.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Oxalo Forte Cap 10'S",
+                   Brandname:"By OXALO FORTE",
+                   discription:"strip Of 20 Tablets",
+                   price:380.73,
+                   strikedOfprice:464},
+                
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/I10779/himalaya-cystone-forte-tablets-30s-2-1641787883.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Himalaya Cystone Forte Tablets - 30'S",
+                   Brandname:"By HIMALAYA store",
+                   discription:"strip Of 20 Tablets",
+                   price:73.8,
+                   strikedOfprice:90},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products/141665/potrate-10mg-tablet-2-1641533278.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Potrate 10mg Tablet",
+                   Brandname:"By POTRATE store",
+                   discription:"strip Of 10 Tablets",
+                   price:56.58,
+                   strikedOfprice:69},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/241714/lobun-cap-2-1641534279.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Lobun Cap",
+                   Brandname:"By LABUN store",
+                   discription:"strip Of 10 Tablets",
+                   price:370,
+                   strikedOfprice:463},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/I41492/pure-nutrition-detox-kidney-integrated-bladder-and-kidney-support-60-caps-2-1641788269.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Pure Nutrition Detox Kidney (Integrated Bladder And Kidney Support) - 60 Caps",
+                   Brandname:"By PURE NUTRITION store",
+                   discription:"bottle Of 60 Tablets",
+                   price:1619,
+                   strikedOfprice:1750},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products/177415/unienzyme-strip-of-15-tablets-2-1642155532.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Unienzyme Strip Of 15 Tablets",
+                   Brandname:"By UNIENZYME store",
+                   discription:"bottle Of 60 Tablets",
+                   price:70,
+                   strikedOfprice:85},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/280271/digene-acidity-gas-relief-tablets-15s-orange-flavour-2-1641263794.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Digene Acidity & Gas Relief Tablets 15s- Orange Flavour",
+                   Brandname:"By DIGINE store",
+                   discription:"strip Of 15 Tablets",
+                   price:18,
+                   strikedOfprice:21},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/255389/digene-gel-acidity-gas-relief-200ml-orange-flavour-2-1641263859.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Digene Gel Acidity & Gas Relief - 200ml Orange Flavour",
+                   Brandname:"By DIGINE store",
+                   discription:"bottle of 200ml liquid",
+                   price:107,
+                   strikedOfprice:131},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/200670/polycrol-xpress-relief-antacid-gel-sugar-free-450ml-2-1641398798.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Polycrol Xpress Relief Antacid Gel Sugar Free - 450ml",
+                   Brandname:"By POLYCROL store",
+                   discription:"bottle of 450ml liquid",
+                   price:157,
+                   strikedOfprice:173},
+                
+                   {image:"https://cdn01.pharmeasy.in/dam/products_otc/067685/eno-regular-antacid-sachet-of-5-g-2-1641399049.jpg?dim=320x320&dpr=1&q=100",
+                   meDname:"Eno Regular Antacid Sachet Of 5 G",
+                   Brandname:"By ENO store",
+                   discription:"pouch of 3G powder",
+                   price:8,
+                   strikedOfprice:10},
+                ];
+                   
+ var med_toby = JSON.parse(localStorage.getItem("cartitem"))||[];
+ window.addEventListener("load",function(){
+        datadisplay(med_data);
+       });
+   
+       
+       datadisplay(med_data);
+     
+   function datadisplay(med_data){
+     document.querySelector("#container").innerHTML="";
+
+      med_data.map(function (data) {
+        var div = document.createElement("div");
+        
+        var image1 = document.createElement("img");
+        image1.setAttribute("src", data.image);
+
+        
+
+        var name1 = document.createElement("p");
+        name1.textContent = data.meDname;
+
+        var name2 = document.createElement("p");
+        name2.textContent = data.Brandname;
+      
+        var name3 = document.createElement("p");
+        name3.textContent = data.discription;
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("id","contp");
+        
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+
+        var p2 = document.createElement("p");
+        p2.textContent = data.strikedOfprice;
+      
+        div2.append(p1, p2);
+        var btn = document.createElement("button");
+        btn.textContent = "Add To Cart";
+        btn.addEventListener("click", function (){
+          cartfun(data);
+        });
+        div.append(image1,name1,name2,name3 , div2, btn);
+        document.querySelector("#container").append(div);
+      });
+    }
+  function cartfun(data) {
+   med_toby.push(data);
+   localStorage.setItem("cartitem",JSON.stringify(med_toby));
+   alert("added succesfully");
+  }
+                   
+</script>
