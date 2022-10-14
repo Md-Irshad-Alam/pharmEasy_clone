@@ -59,24 +59,24 @@ var top_imeage = [
    },
 ]
 displayImg();
-    var slide= [
-        {
-            image_url:
-            "https://cdn01.pharmeasy.in/dam/banner/banner/833b0458766-HP.jpg",
+    // var slide= [
+    //     {
+    //         image_url:
+    //         "https://cdn01.pharmeasy.in/dam/banner/banner/833b0458766-HP.jpg",
             
-        },
-        {
-            image_url:
-            "https://cdn01.pharmeasy.in/dam/banner/banner/093f30fa096-revisedgrand1000.jpg",
+    //     },
+    //     {
+    //         image_url:
+    //         "https://cdn01.pharmeasy.in/dam/banner/banner/093f30fa096-revisedgrand1000.jpg",
             
-        },
-        {
-            image_url:
-            "https://cdn01.pharmeasy.in/dam/banner/banner/c0034c14fe6-634X274.jpg",
+    //     },
+    //     {
+    //         image_url:
+    //         "https://cdn01.pharmeasy.in/dam/banner/banner/c0034c14fe6-634X274.jpg",
             
-        },
-    ]
-    middisplay();
+    //     },
+    // ]
+    // Slider_img()
 function displayImg (){
     top_imeage.map(function(elem){
         var div = document.createElement("div");
@@ -93,24 +93,32 @@ function displayImg (){
         dist.style.color="orange"
         dist.style.fontSize="12px"
         dist.style.textAlign="center"
-
-         
-   
     div.append(images, tag_name, dist);
     document.querySelector("#top").append(div);
     
     })
 
 }
-function middisplay(){
-    slide.map(function(elem){
-        var div = document.createElement("div");
-        var sld = document.createElement("img");
-        sld.setAttribute("src", elem.image_url);
-        sld.setAttribute("alt", elem.id);
-        sld.setAttribute("id", "b_img");
-        div.append(sld);
-        document.querySelector("#banner").append(div);
-    })
+
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100) {
+    document.getElementById("navbar2").style.top = "50px";
+  } else {
+    document.getElementById("navbar2").style.top = "-50px";
+  }
 }
+
+// stricy nav bar 
+
+
+
+
+
+
+
+
 // slder property part 
