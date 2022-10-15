@@ -323,9 +323,22 @@ h2{
 .carousel-cell{
     width: 60%;
     margin-right: 10px;
+    
+   
+    
 }
 .carousel-cell::before{
     display: block;
+    position: static;
+    
+    
+}
+.carousel-cell img{
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    
+    border-radius: 10px;
 }
 /* =============concern shope======================== */
 
@@ -453,13 +466,17 @@ h2{
 /* =========container_ 7======= */
 #container_7{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    margin: auto;
+    margin-left: 30px;
+   
+    
+    
     
 }
-#container_7 img{
- width: 250px;
- height: 200px;
+#container_7 >div img{
+ width: 200px;
+ margin: auto;
+ margin-left: 10px;
  
  
 }
@@ -494,23 +511,111 @@ h2{
 }
 #box_9{
     display: flex;
-    justify-content: space-around;
     justify-content: center;
     align-items: center;
-    gap:15px;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    font-size: 13px;
-
+    justify-content: space-around;
+   box-sizing: border-box;
+  
 }
+#box_9  p{
+    margin-top: 5px;
+}
+
 #box_9 img{
-   
-    width: 100px;
-    height: 100px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    width: 100px;
+    height: 120px;
+    
     
 }
+/* ================== */
+#container_10{
+   
+}
+#box_10 {
+    display: flex;
+   gap: 20px;
+    width: 300px;
+    height: 325p;
+    margin: 5px;
+    text-align: center;
+    
+}
+#container_10 img{
+    width: 200px;
+    height: 150px;
+    
+}
+#box_10 div{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+#container_11{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(100, 100, 100);
+    margin-bottom: 20px;
+}
+#box_11 div {
+    display: flex;
+    
+    gap: 10px;
+    justify-content: center;
+
+}
+out_container_11{
+  
+   
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   margin-bottom: 30px;
+}
+#box_11 img{
+    width: 150px;
+    height: 170px;
+    padding: 10px;
+}
+
+#box_11 div i{
+    margin-top: 25px;
+   
+}
+#background_img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#background_img{
+    background-image:url("img_folder/phone_01.webp");
+    background-size:cover;
+    width: 1290px;
+    height: 350px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-color: rgb(198, 243, 228);
+   
+}
+#background_img >div img{
+    margin-top: 80px;
+   
+
+}
+#background_img >div h4 {
+    padding: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+    margin-bottom: -30px;
+}
+#background_img >div h2 {
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 30px;
+    margin-bottom: -30px;
+}
+
    
     /* ====================== */
 
