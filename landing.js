@@ -59,24 +59,8 @@ var top_imeage = [
    },
 ]
 displayImg();
-    // var slide= [
-    //     {
-    //         image_url:
-    //         "https://cdn01.pharmeasy.in/dam/banner/banner/833b0458766-HP.jpg",
-            
-    //     },
-    //     {
-    //         image_url:
-    //         "https://cdn01.pharmeasy.in/dam/banner/banner/093f30fa096-revisedgrand1000.jpg",
-            
-    //     },
-    //     {
-    //         image_url:
-    //         "https://cdn01.pharmeasy.in/dam/banner/banner/c0034c14fe6-634X274.jpg",
-            
-    //     },
-    // ]
-    // Slider_img()
+    
+    
 function displayImg (){
     top_imeage.map(function(elem){
         var div = document.createElement("div");

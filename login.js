@@ -51,6 +51,7 @@ function compare(e){
 
     let email =document.querySelector("#login_name").value
     let password = document.querySelector("#login_password").value
+    
 
     console.log(email,password)
 
@@ -58,19 +59,15 @@ function compare(e){
         return email==e.email && password == e.password;
     })
     console.log(isPresent)
-    // isPresent = false;
-    // for(var i=0; i<sign_up_data.length;i++){
-    //     if(email == userData && password ==userData ){
-    //         isPresent =true;
-    //         break;
-    //     }
-    
-        if(isPresent.length){
-            alert("successfully logged in")
-        }else{
-            alert("wrong credentials")
-        }
 
+        if(isPresent==true){
+         
+            window.location.href="landing.html"
+          
+        }else{
+            console.log("hello")
+            alert("Opps! Input data is not Matching ")
+        } 
     
 }
 
